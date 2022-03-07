@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "python-template"
+version = "0.0.1"
+description = ""
+authors = ["Lennart Aigner <lennart.aigner@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+yapf = "^0.32.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+pyfakefs = "^4.4.0"
+testfixtures = "^6.18.0"
+coverage = "^5.5"
+virtualenv = "^20.4.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

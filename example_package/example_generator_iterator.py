@@ -1,4 +1,4 @@
-from typing import Iterator
+from typing import Iterable, Iterator, List, Any
 
 
 class ExampleIterator:
@@ -73,4 +73,17 @@ class ExampleGeneratorDataset:
             return result
         else:
             raise StopIteration
+
+def batches(iterable: Iterable[Any], batch_size:int) -> Iterable[List[Any]]:
+    batch = []
+    for item in iterable:
+        batch.append(item)
+        
+        if len(batch) == batch_size:
+            yield batch
+            batch = []
+    # output rest if not fit into batchsize
+    if batch:
+        yield batch
+        
     

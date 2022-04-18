@@ -1,2 +1,5 @@
-# PYthon Files
+# Python Files
 *.pyc
+
+# Python Notebooks
+*.ipynb_checkpoints
